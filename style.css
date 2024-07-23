@@ -7,6 +7,7 @@
 }
 body {
   background-color: #fefae0;
+  margin-top:0;
 }
 
 header {
@@ -48,30 +49,51 @@ header {
 
 .main-content {
   
-
-  width: 100%;
-  padding: 30px 150px;
-  margin-top: 50px;
+  border:1px solid black;
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  margin-top: 30px;
   margin-bottom: 40px;
 
   #home {
-    width: 70%;
+    max-width: 600px;
+    
+    border:1px solid;
+    /* width: 70%; */
+    /* width:100%; */
     
     display: flex;
-    justify-content: space-between;
+    
     align-items: center;
-    gap:30px;
+    /* gap:30px; */
+    p {
+      width: 100%;
+    }
+    .profile-img {
+      margin: 10px;
+    }
+    
+  }
+  @media screen and (max-width:500px){
+    #home{
+      flex-direction: column;
+      text-align: center;
+     
+      
+    }
+    
   }
 
   .profile-img {
     
     
-    width: 180px;
-    height: 180px;
+   min-width: 200px;
+    height: 250px;
     
 
     img {
-      border-radius:40%;
+      border-radius:50%;
       background-color: aliceblue;
       height: 100%;
       width: 100%;
@@ -81,7 +103,11 @@ header {
 
   #about {
     padding: 15px 0px;
+    
     text-align: justify;
+    h2 {
+      margin-bottom: 10px;
+    }
     p {
       line-height: 30px;
     }
